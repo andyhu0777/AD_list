@@ -73,6 +73,13 @@
         </div>
 
 
+
+        <div class="page_selector">
+            <a  href="#">Prev </a>
+            <a  href="#">Next</a>
+        </div>
+
+
         <script src="jquery-2.2.2.min.js"> </script>
         <script src="ad_list.js"> </script>
     </body>

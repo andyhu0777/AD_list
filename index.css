@@ -29,3 +29,11 @@ display: table-footer-group;
 .r_table_body {
 display: table-row-group;
 }
+
+
+
+.page_selector {
+   text-decoration: none;  
+  position: absolute;
+  left: 600px;
+}
