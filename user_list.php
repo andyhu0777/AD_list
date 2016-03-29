@@ -5,11 +5,11 @@
 
     <head>
         <title> Test for list </title> 
-        <link rel="stylesheet" type="text/css" href="index.css" >
+        <link rel="stylesheet" type="text/css" href="user_list.css" >
     </head>
 
     <body>
-        <div class="ad_list" ad_checkbox="true" ad_del="true" ad_max_item = "20" >
+        <div class="ad_list" ad_checkbox="true" ad_del="true" ad_max_item = "20" ad_list_server_url = "user_list.ajax.php" >
             <div class="r_table">
                 <div class ="r_table_row">
                     <div class="r_table_heading"> Name </div>

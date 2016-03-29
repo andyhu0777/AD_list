@@ -39,6 +39,7 @@ function parse_options(list_container)
       arr['del'] = list_container.attr('ad_del') === 'true' || false;
       arr['page_size'] = list_container.attr('ad_page_size') ? Number(list_container.attr('ad_page_size')) : 10;
       arr['max_item'] = list_container.attr('ad_max_item') ? Number(list_container.attr('ad_max_item')) : 0;
+      arr['list_server_url'] = list_container.attr('ad_list_server_url') || null;
       return arr;
 }
 
