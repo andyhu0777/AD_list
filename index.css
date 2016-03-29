@@ -1,0 +1,31 @@
+
+.r_table {
+display: table;
+width: 800;
+}
+
+.r_table_row {
+display: table-row;
+}
+
+
+.r_table_cell, .r_table_heading {
+display: table-cell;
+padding: 3px 10px;
+border: 1px solid #999999;
+}
+
+.r_table_heading {
+        background-color: #ddd;
+        font-weight:bold;
+}
+
+.r_table_foot {
+display: table-footer-group;
+         font-weight: bold;
+         background-color: #ddd;
+}
+
+.r_table_body {
+display: table-row-group;
+}
