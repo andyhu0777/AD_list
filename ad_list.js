@@ -44,34 +44,37 @@ function parse_options(list_container)
 }
 
 
-class AjaxMaster {
-    construct(server_url, selector)
-    {
-        this.server_url = server_url;
-        this.selector = selector;
-    }
+function AjaxMaster(server_url, selector)
+{
+    this.server_url = server_url;
+    this.selector = selector;
 
-    refresh()
-    {
-        $.ajax({
-            url: this.server_url,
-            method: "POST",
-            data: {
-               content: "",
-               page_size: selector.get_page_size(),
-               page_num: selector.get_page_num(),
-            },
-            success(on_success)
-        });
-    }
-    on_success(data)
+    this.ad_callback = function(data)
     {
        json = JSON.parse(data);
        this.selector.set_max_item(json.max_item);
        console.log(this.selector);
        update_content();
     }
-    update_content()
+
+    this.refresh = function()
+    {
+        var callback = this.ad_callback;
+        var selector = this.selector;
+        $.ajax({
+            url: this.server_url,
+            type: "POST",
+            data: {
+               content: "",
+               page_size: selector.get_page_size(),
+               page_num: selector.get_page_num(),
+            },
+            success: function(data) {
+                
+            },
+        });
+    }
+    this.update_content = function()
     {
     }
 }
